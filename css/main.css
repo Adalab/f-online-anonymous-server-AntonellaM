@@ -37,6 +37,12 @@ body {
     background-color: black;
     border: 1px solid black;
     z-index: 1;
+    transition: all .5s ease-in-out;
+}
+
+.nav-trigger:hover, .nav-close:hover {
+    box-shadow: 0 0 15px #eee;
+    transform: scale(1.1);
 }
 
 
@@ -81,6 +87,11 @@ body {
     font-size: 1.6em;
     line-height: 2em;
     color: #eee;
+    transition: all .5s ease-in-out;
+}
+
+.nav__link:hover {
+    font-size: 2em;
 }
 .nav-close {
     position: absolute;
@@ -96,6 +107,7 @@ body {
     background-color: black;
     border: 1px solid black;
     z-index: 3;
+    transition: all .5s ease-in-out;
 }
 
 
@@ -103,6 +115,8 @@ body {
 /* MAIN */
 .page__main {
     height: 100vh;
+    padding: 0 30px;
+    margin: 0 auto;
 }
 .page__wrapper {
     height: 100%;
@@ -112,7 +126,6 @@ body {
 }
 .page__main-title {
     width: 50%;
-    padding: 0 30px;
     font-size: 2em;
     text-transform: uppercase;
     margin-bottom: 275px;
@@ -125,6 +138,8 @@ body {
 .page__footer {
     position: absolute;
     bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
 }
 .page__wrapper--footer {
@@ -146,3 +161,25 @@ body {
     opacity: 1;
 }
 .hidden { display: none }
+
+@media all and (min-width: 768px) {
+
+    .page__main-title {
+        font-size: 2.8em;
+    }
+    .page__main, .page__footer {
+        padding: 0 60px;
+        max-width: 900px;
+    }
+
+    .page__wrapper--footer {
+        width:  100%;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .page__main-title {
+        font-size: 4em;
+        width: 500px;
+    }
+}
